@@ -7,7 +7,7 @@ from flask_jwt_extended import (jwt_required, jwt_refresh_token_required, get_jw
 @app.route('/')
 def index():
     """Index page"""
-    return Parcel_Controller.index()
+    return jsonify({'message': "Welcome to Mt-Olives Church Database"})
 
 @app.route('/api/v1/parcels', methods = ['GET'])
 @jwt_required
